@@ -53,6 +53,11 @@ python -m http.server 8080
 
 Open `http://localhost:8080`.
 
+## Distribution
+
+Large binary packs (plugin archives, bot packs, etc.) are **not** stored in the git tree.
+Publish them as assets on [GitHub Releases](../../releases) so the repository stays reviewable.
+
 ## Roadmap
 
 - [ ] Enable GitHub Pages for a public demo URL
