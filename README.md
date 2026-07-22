@@ -1,27 +1,26 @@
 # CoreCraft
 
-Public website for a Minecraft plugins product line.
+Public product website for a Minecraft plugin platform.
 
-## Description
+## Overview
 
-Marketing and catalog site for CoreCraft plugins: landing page, about, terms, and plugin listings.
+Static multi-page website presenting the CoreCraft product line: landing page, about, terms, and plugin catalog.
 
 ## Architecture
 
-Static multi-page site (HTML/CSS/JS). No server-side runtime required for the public pages.
+Static site (HTML / CSS / JavaScript). No application server is required for the public pages. Optional IIS hosting via `web.config`.
 
 ```
-corecraft/
-├── index.html      # Landing
-├── about.html
-├── terms.html
-├── 404.html
-├── style.css
-├── script.js
-├── plugins.js
-├── Images/
-└── web.config      # IIS hosting hints
+Visitor → static files (HTML/CSS/JS/assets)
 ```
+
+## Features
+
+- Landing page
+- About and terms pages
+- Plugin listing scripts
+- Basic SEO files (`robots.txt`, `sitemap.xml`)
+- Custom 404 page
 
 ## Tech stack
 
@@ -30,25 +29,35 @@ corecraft/
 - JavaScript
 - Optional IIS (`web.config`)
 
-## Run locally
+## Project structure
 
-Open `index.html` in a browser, or serve the folder with any static file server:
-
-```bash
-# Python
-python -m http.server 8080
-
-# Node
-npx serve .
+```
+corecraft/
+├── index.html
+├── about.html
+├── terms.html
+├── 404.html
+├── style.css
+├── script.js
+├── plugins.js
+├── Images/
+└── web.config
 ```
 
-Then open `http://localhost:8080`.
+## Getting started
+
+```bash
+python -m http.server 8080
+# or: npx serve .
+```
+
+Open `http://localhost:8080`.
 
 ## Roadmap
 
-- [ ] Keep content and assets in sync with the product line
-- [ ] Improve SEO metadata where needed
-- [ ] Consider separating marketing content from binary assets (e.g. large archives)
+- [ ] Enable GitHub Pages for a public demo URL
+- [ ] Keep large binary archives out of the main branch (or use Releases)
+- [ ] Tighten SEO and accessibility metadata
 
 ## License
 
